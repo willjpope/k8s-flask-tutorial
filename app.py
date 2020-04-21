@@ -1,4 +1,4 @@
-from flask import Flask, Request
+from flask import Flask, request
 
 import config
 
@@ -6,6 +6,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    print("Headers: ", vars(request.headers))
+    for header in request.headers.items():
+        print(header)
     return "Hello World! " + print(request.headers[X-Remote-User])
 
 if __name__ == "__main__":
