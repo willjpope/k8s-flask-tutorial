@@ -2,7 +2,7 @@ from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm
 
-import teradataSQL as td
+import teradatasql as td
 
 def loginToTD(strHost, strUsr, strPwd):
     try:
