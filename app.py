@@ -1,13 +1,8 @@
-from flask import Flask, request
-
-import config
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    usrname = request.environ.get('REMOTE_USER')
-    return "Hello World!" + str(usrname) + '            ' + str(request.headers)
+import routes
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=config.PORT, debug=config.DEBUG_MODE)
