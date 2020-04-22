@@ -6,7 +6,7 @@ import teradatasql as td
 
 def loginToTD(strHost, strUsr, strPwd):
     try:
-        tdSession = teradatasql.connect(host=strHost, user=strUsr, password=strPwd, logmech='LDAP')
+        tdSession = td.connect(host=strHost, user=strUsr, password=strPwd, logmech='LDAP')
         return True
     except:
         return False
