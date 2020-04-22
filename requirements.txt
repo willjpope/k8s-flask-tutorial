@@ -8,3 +8,4 @@ Werkzeug==0.14.1
 WTForms==2.2.1
 Flask-WTF==0.14.3
 TeradataSQL==16.20.0.60
+Teradata==15.10.0.21
