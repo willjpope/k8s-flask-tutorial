@@ -1,5 +1,12 @@
 FROM python:3.6-jessie
 
+RUN apt-get update \
+ && apt-get install --yes --no-install-recommends \
+        apt-transport-https \
+        curl \
+        gnupg \
+        unixodbc-dev \
+
 RUN yum install -y unixODBC
 RUN yum install -y unixODBC-devel
 
